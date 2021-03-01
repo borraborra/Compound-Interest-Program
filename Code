@@ -1,0 +1,17 @@
+def compound_by_period(balance, rate, num_periods):
+
+    output = [balance]
+
+    for n in range(0,num_periods):
+
+        balance = round(balance * (1 + rate), 2)
+
+        output.append(round(balance, 2))
+
+    return output
+
+wheat=compound_by_period(1,1,64)
+print(wheat)
+indices =[64]
+total_wheat = [wheat[index] for index in indices]
+print(total_wheat)
